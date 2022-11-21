@@ -4,18 +4,32 @@
 
 using namespace std;
 
-// Белки Жиры Углеводы Ккал
 struct PFCKk {
-	int Proteins;
-	int Fat;
-	int Carbohydrates;
-	int Energy_Kk;
+	string name = "any";
+	double Proteins = 0;
+	double Fat = 0;
+	double Carbohydrates = 0;
+	double Energy_Kk = 0;
+
+	string toString();
+
+	bool getValue(string str, string ctrl, double& res);
+
+	double getValue(string str, string ctrl);
+
+	void fromString(string str);	
 };
+
+
 
 struct Product {
 	string name;
 	PFCKk pfckk;
 	int weight_g;
+
+	string toString() {
+		return name;
+	}
 };
 
 struct Dish {
@@ -25,5 +39,7 @@ struct Dish {
 	int price_r;
 	Product* contents;
 
+	string toString() {
+		return type + " " + name;
+	}
 };
-
