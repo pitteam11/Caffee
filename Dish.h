@@ -11,16 +11,14 @@ struct PFCKk {
 	double Carbohydrates = 0;
 	double Energy_Kk = 0;
 
-	string toString();
+	string toString(); 
 
 	bool getValue(string str, string ctrl, double& res);
-
 	double getValue(string str, string ctrl);
-
-	void fromString(string str);	
+	bool fromStringFormat1(string str);
+	bool fromStringFormat2(string str);
+	void fromString(string str);
 };
-
-
 
 struct Product {
 	string name;
